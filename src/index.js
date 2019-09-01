@@ -7,11 +7,12 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+const port = process.env.PORT || 8080;
 const routes = require('./Routes/Routes');
 
 app.use(cors());
 app.use('/', routes);
 
-app.listen(3000);
+app.listen(port);
 
 module.exports = app;

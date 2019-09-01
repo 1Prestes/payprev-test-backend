@@ -13,6 +13,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "start": "nodemon src/index.js",
     "dev": "nodemon src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
