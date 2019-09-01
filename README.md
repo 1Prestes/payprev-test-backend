@@ -34,7 +34,14 @@ As rotas estão divididas em 3 niveis.
     - Metodo POST, cria uma pasta(se ela não existir) e adiciona o dev dentro dela, os parametros requeridos são: folderName,     idDev(id do dev que voce quer adicionar), tags(Separe as tags por virgulas, não é obrigatorio enviar as tags).
 
   3. http://localhost:<PORT>/folders
-    - Metodo GET, mostra todas as pastas criadas pelo usuario comum e os devs dentro 
+    - Metodo GET, mostra todas as pastas criadas pelo usuario comum e os devs dentro.
+  
+  4. http://localhost:<PORT>/renamefolder
+    - Metodo PUT, altera o nome da pasta criada pelo usuario, seus parametros são: folderName(nome atual), newFolderName,           id(id da pasta).
+  
+  5. http://localhost:<PORT>/delete
+    - Metodo DELETE, deleta uma pasta criada pelo usuario, tem como parametro o id da pasta que deseja deletar
+  
     
 3. Rotas de admin: **rotas liberadas apenas para usuarios com super poderes(admin)**
 
@@ -54,4 +61,5 @@ As rotas estão divididas em 3 niveis.
    4. http://localhost:<PORT>/deleteuser
     - Metodo DELETE, deleta um usuario cadastrado(Não os usuarios salvos do github) , precisa ser passado o id do usuario.
   
-  
+  5. http://localhost:<PORT>/edit
+    - Metodo PUT, edita as informações de um usuario cadastrado(não edita informações de usuarios salvos do GitHub). Os parametros são id(id do user que quer alterar uma informação), cpf, email, password, admin(Boolean).
